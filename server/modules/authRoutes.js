@@ -16,7 +16,7 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
     // Redirect to frontend after successful authentication
-    res.redirect("http://localhost:5173/dashboard"); // Change this to your frontend URL
+    res.redirect("https://budgetbuddy09.vercel.app/dashboard"); // Change this to your frontend URL
   }
 );
 
@@ -27,7 +27,7 @@ router.get("/google/logout", (req, res) => {
       return next(err); // Pass any error to the next middleware
     }
   });
-  res.redirect("http://localhost:5173");
+  res.redirect("https://budgetbuddy09.vercel.app");
 });
 
 module.exports = router;
