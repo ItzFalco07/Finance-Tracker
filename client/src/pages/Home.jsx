@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/getuser", {
+        const response = await axios.get("https://budgetbuddy-cplc.onrender.com/getuser", {
           withCredentials: true,
         });
         setUser(response.data.user); // Assuming response contains a 'user' object

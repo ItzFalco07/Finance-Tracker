@@ -7,7 +7,7 @@ const Grid = ({ id, name, amount, type }) => {
     // Delete expense function
     const DeleteGrid = async () => {
         try {
-            await axios.post('http://localhost:5000/delete-expense', { id });
+            await axios.post('https://budgetbuddy-cplc.onrender.com/delete-expense', { id });
             toast.info('Expense deleted!');
         } catch (error) {
             console.error('Error while deleting expense:', error);

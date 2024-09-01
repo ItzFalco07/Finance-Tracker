@@ -66,7 +66,7 @@ const Signup = ({ SignupSwitch }) => {
             <b>OR</b>
           </p>
 
-          <a href="http://localhost:5000/auth">
+          <a href="https://budgetbuddy-cplc.onrender.com/auth">
             <button
               id="google"
               data-mdb-ripple-init

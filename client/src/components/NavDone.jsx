@@ -30,7 +30,7 @@ const NavDone = ({ userUrl }) => {
               <ul className="dropdown-menu text-small show">
                 <li><a className="dropdown-item" href="#">Profile</a></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href='http://localhost:5000/auth/google/logout'>Log out</a></li>
+                <li><a className="dropdown-item" href='https://budgetbuddy-cplc.onrender.com/auth/google/logout'>Log out</a></li>
               </ul>
             )}
           </div>

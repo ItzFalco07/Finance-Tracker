@@ -29,7 +29,7 @@ const Login = ({Switch}) => {
         <div id='idk' className="text-center">
             <p><b>OR</b></p>
 
-            <a href="http://localhost:5000/auth">
+            <a href="https://budgetbuddy-cplc.onrender.com/auth">
             <button id='google' data-mdb-ripple-init type="button" className="btn btn-primary center btn-floating mx-1">
                 <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-color-icon.png" width="30px" />
                 <h5>Login With Google</h5>

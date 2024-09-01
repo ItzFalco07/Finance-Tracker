@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     const fetchExpenses = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/get-expense', { withCredentials: true });
+        const res = await axios.get('https://budgetbuddy-cplc.onrender.com/get-expense', { withCredentials: true });
         var expenses = res.data.Allexpense
         setResponse( expenses || []);
           const totalBalance = expenses.reduce((acc, expense) => {
@@ -45,7 +45,7 @@ const Dashboard = () => {
       return
     } else {
       try {
-        const response = await axios.post("http://localhost:5000/add-expense", {
+        const response = await axios.post("https://budgetbuddy-cplc.onrender.com/add-expense", {
           name,
           amount,
           type
@@ -79,7 +79,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/getuser", {
+        const response = await axios.get("https://budgetbuddy-cplc.onrender.com/getuser", {
           withCredentials: true,
         });
         setUser(response.data.user); // Assuming response contains a 'user' object
