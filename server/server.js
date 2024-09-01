@@ -50,7 +50,7 @@ app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://financetracker.vercel.app', // your frontend URL
+  origin: 'https://budgetbuddy09.vercel.app/', // your frontend URL
   credentials: true, // Allow credentials (cookies)
 }));
 // Routes
