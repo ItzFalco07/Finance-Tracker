@@ -1,0 +1,8 @@
+1. Get input value ✅
+2. setup Schema ✅
+3. Setup Model with User ✅
+4. get the inputs from DB by arranging it in ascending order in an array ✅
+5. map through the array to put the  ✅
+6. 
+7. read the amount and the type and estimate the Total sum
+8. Display the sum as "Balance"

@@ -1,0 +1,220 @@
+#Form__Con {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.588);
+    background: blur;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Apply blur to the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+#Form__Con form {
+    background-color: rgb(23, 26, 42);
+    padding: 50px;
+    border-radius: 10px;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#google {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin: auto 0;
+}
+
+#idk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.corner {
+    top: 0;
+    right: 0;
+    margin: 30px;
+}
+
+#btn-cross {
+    width: 42px;
+    height: 42px;
+}
+
+.form-control {
+    background-color: rgb(30, 33, 41);
+}
+
+.heading-top {
+    top: 30px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mt {
+    margin-top: 3rem;
+}
+
+#input {
+    flex-direction: row;
+    gap: 2em;
+}
+
+#input input {
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+}
+
+#input button {
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+#input button:hover {
+    box-shadow: 0px 0px 40px #375a7f;
+}
+
+@media (max-width: 500px) {
+    #input {
+        flex-direction: column;
+    }
+}
+@media (max-width: 550px) {
+    .col-1 {
+        width: 14%;
+    }
+    .idk {
+        width: 34%;
+    }
+}
+@media (max-width: 425px) {
+    #break {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .col-12 {
+        width: 70%;
+    }
+    #nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+@media(max-width: 768px){
+    .dropdown-menu.show {
+        right: -40px;
+    }
+}
+
+.dropdown-menu.show {
+    right: -120px;
+}
+
+#exampleModal {
+    display: block;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+
+.modal-dialog {
+    width: 100%;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mt {
+    margin-top: 20px;
+}
+
+
+
+#options {
+    margin-top: 20px;
+
+}
+
+.close {
+    border: none;
+}
+
+.themed-grid-col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+#grid {
+    margin-top: 2rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.delete {
+    cursor: pointer;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: rgba(255, 0, 0, 0.821);
+    /* background-color: rgb(255, 70, 70);
+    border: 2px solid rgba(67, 12, 12, 0.45); */
+}
+.delete:hover {
+    color: rgba(255, 0, 0, 0.524);
+    /* background-color: rgb(255, 27, 27); */
+}
+
+.plus {
+   background-color: rgba(92, 255, 47, 0.571);
+}
+.plus, .minus {
+    font-size: 30px;
+    padding: 0;
+}
+.minus {
+    background-color: rgba(255, 47, 47, 0.571);
+}
+
+#balance {
+    margin: 20px auto;
+    background-color: rgb(16, 71, 16);
+    width: fit-content;
+}
+
+#balance h1 {
+    font-size: 1.4em;
+}
+
+#wallet {
+    margin-right: 10px;
+    color: rgb(84, 251, 84);
+}
