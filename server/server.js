@@ -35,7 +35,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // changes: Set to 10 years
-        secure: false, // Set to true if using HTTPS
+        secure: true, // Set to true if using HTTPS
     },
     store: MongoStore.create({ // changes: Use MongoDB for session storage
         mongoUrl: process.env.MONGO_URI,
