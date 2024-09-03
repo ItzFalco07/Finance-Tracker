@@ -20,7 +20,7 @@ const Signup = ({ SignupSwitch }) => {
     try {
       // Send signup data to the server
       const response = await axios.post(
-        "https://budgetbuddy-cplc.onrender.com/user/signup",
+        "https://budgetbuddy-cplc.onrender.com/user/register",
         formData,
         { withCredentials: true } // Send credentials (cookies)
       );
