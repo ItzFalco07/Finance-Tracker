@@ -43,7 +43,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // 10 years
-        secure: process.env.NODE_ENV === 'production', // Secure cookies in production
+        secure: true, // Secure cookies in production
         httpOnly: true, // Prevent access via JavaScript
         sameSite: 'none', // Allows cross-origin requests
     },
