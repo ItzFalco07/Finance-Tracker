@@ -9,6 +9,8 @@ require('./modules/passport'); // Ensure the path is correct
 const authRoutes = require('./modules/authRoutes');
 const MongoStore = require('connect-mongo'); 
 const deleteExpense = require('./modules/deleteExpense');
+const User = require('./modules/userSchema'); // Adjust path as necessary
+const userRoutes = require('./modules/userRoutes'); // Add this line
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -95,6 +97,7 @@ app.get('/get-expense', async (req,res)=>{
 })
 
 app.post('/delete-expense', deleteExpense);
+app.use('/user', userRoutes); // Add this line
 
 app.get('/', (req, res) => {
     res.send('Backend server');
