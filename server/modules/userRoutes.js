@@ -1,7 +1,7 @@
 // modules/userRoutes.js
 const express = require('express');
 const router = express.Router();
-const User = require('./UserSchema'); // Adjust path as necessary
+const User = require('./userSchema'); // Adjust path as necessary
 const bcrypt = require('bcryptjs'); // For hashing passwords
 
 // Route to handle user registration
