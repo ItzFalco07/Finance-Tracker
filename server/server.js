@@ -14,6 +14,14 @@ const app = express();
 const port = process.env.PORT || 5000;
 const uri = process.env.MONGO_URI;
 
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+    origin: ['https://budgetbuddy09.vercel.app'], // your frontend URL
+    credentials: true, // Allow credentials (cookies)
+  }));
+
 // Connect to MongoDB
 async function connectDB() {
     try {
@@ -34,10 +42,12 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // changes: Set to 10 years
-        secure: true, // Set to true if using HTTPS
+        maxAge: 10 * 365 * 24 * 60 * 60 * 1000, // 10 years
+        secure: process.env.NODE_ENV === 'production', // Secure cookies in production
+        httpOnly: true, // Prevent access via JavaScript
+        sameSite: 'none', // Allows cross-origin requests
     },
-    store: MongoStore.create({ // changes: Use MongoDB for session storage
+    store: MongoStore.create({
         mongoUrl: process.env.MONGO_URI,
         collectionName: 'sessions'
     })
@@ -46,13 +56,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: 'https://budgetbuddy09.vercel.app', // your frontend URL
-  credentials: true, // Allow credentials (cookies)
-}));
+
 // Routes
 app.use('/auth', authRoutes);
 
