@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Grid from '../components/Grid'
 import BalanceDisplay from '../components/BalanceDisplay'
+axios.defaults.withCredentials = true;
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
